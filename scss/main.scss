@@ -1,0 +1,389 @@
+@import 'normalize';
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
+
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+/* Используем шрифт Мавен Про, загрузили через cdn */
+body{
+    margin: 0;
+}
+
+/* ===== first section ===== */
+.app{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: $first-section-bg;
+    position: relative;
+    padding-bottom: 15rem;
+}
+
+.weather{
+    width: 85%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    
+//    &-brand{
+//        font-size: 2rem;
+//        text-transform: uppercase;
+//        font-family: 'Ubuntu',sans-serif;
+//    }
+    
+    &-fun{
+        font-size: 2rem;
+        font-family: 'Ubuntu',sans-serif;
+        text-transform: uppercase;
+        width: 17rem;
+    }
+    
+    &-menu{
+        width: 84%;
+        
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            
+            .menu-link{
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.5rem;
+                font-family: 'Ubuntu', sans-serif;
+            }
+            
+            .menu-icon{
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.5rem;
+                padding-left: 1.5rem;
+            }
+        }
+    }
+    
+    &-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 85%;
+    }
+    
+    &-info{
+        align-self: flex-start;
+        width: 50%;
+        padding-top: 8rem;
+    }
+    
+    &-app{
+        font-size: 5.5rem;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    &-text{
+        width: 80%;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.8rem;
+        opacity: 0.7;
+    }
+    
+    &-phone{
+       padding-left: 17rem;
+        padding-top: 10rem;
+    }
+    
+    /* button */
+    
+    &-btn{
+        margin-top: 2rem;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        border: 0;
+        font-size: 1.5rem;
+        font-family: 'Ubuntu', sans-serif;
+        
+        &-download{
+            background: $downdload_btn;
+        }
+        
+        &-features{
+            margin-left: 1rem;
+            background: $feature_btn;
+        }
+    }
+}
+/* ===== Menu =====*/
+.m-menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    list-style: none;
+    font-size: 3rem;
+    line-height: 3;
+    background-color: #6a45e2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: 0.2s;
+    
+    &-link{
+        display: none;
+        color: #fff;
+        font-size: 3rem;
+        text-decoration: none;
+    }
+    
+    &__active{
+      transform: translateX(0%);  
+    }
+}
+
+.close-menu{
+    position: fixed;
+    right: 5rem;
+    top:0;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+/* ===== End of section app ===== */
+
+/* ===== widget section ===== */
+
+
+.widget{
+    
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    &-text{
+        padding-top: 10rem;
+        
+        &__heading{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: $blue;
+        }
+        
+        &__subheading{
+            color: $grey;
+            font-size: 1.5rem;
+        }
+    }
+    
+    &-image{
+        cursor: pointer;
+    }
+}
+
+/* ===== End of widget section ===== */
+
+/* ===== Footer section ===== */
+
+
+.footer{
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    background-color: $footer-bg;
+    position: relative;
+    
+    &-wrapper{
+        width: 85%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    
+    &-fun{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: $tomato;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    &-weather{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: $blue;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    &-menu{
+        width: 84%;
+        
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        
+        &-link{
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-family: 'Ubuntu', sans-serif;
+            opacity: 0.5;
+        }
+        &-icon{
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding-left: 1.5rem;
+            opacity: 0.5;
+        }
+    }
+
+}
+
+
+/* ===== End of footer section ===== */
+
+
+
+/* ===== Media queries =====  */
+@media(min-width:320px) and (max-width:766px){
+    .widget-image{
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .widget-text{
+        font-size: 4rem;
+    }
+    
+    .footer-menu{
+        display: none;
+    }
+    
+    .footer-menu{
+        width: 100%;
+    }
+}
+
+
+@media(min-width:767px) and (max-width:990px){
+    .weather-info{
+        padding-top: 0;
+    }
+    
+    .footer-fun{
+        width: 18rem;
+    }
+}
+
+
+
+@media(max-width: 991px){
+    
+    .visible-lg{
+        display: none;
+    }
+    
+    .m-menu-link{
+        display: block;
+    }
+    
+    .weather{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .weather-phone{
+      padding: 0;
+    }
+    
+    .weather-info{
+        display: none;
+    }
+    
+
+    
+
+    
+    .weather-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+    .weather{
+        width: 95%;
+    }
+    
+    
+}
+
+@media(min-width: 1300px) and (max-width:1980px){
+    .app{
+        padding-bottom: 45rem;
+    }
+    
+    .weather{
+        width: 100%;
+    
+    
+        &-info{
+            padding-top: 7rem;
+        }
+
+        &-fun{
+            font-size: 2.4rem;
+        }
+        
+        &-menu{
+           
+            ul{
+                
+                
+                .menu-link{
+                    font-size: 2.5rem;
+                }
+                
+                .menu-icon{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
