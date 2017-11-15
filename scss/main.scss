@@ -25,7 +25,8 @@ body{
     height: 100vh;
     background-color: $first-section-bg;
     position: relative;
-    padding-bottom: 15rem;
+//    padding-bottom: 15rem;
+    padding-bottom: 2rem;
 }
 
 .weather{
@@ -88,7 +89,7 @@ body{
     }
     
     &-app{
-        font-size: 5.5rem;
+        font-size: 6rem;
         font-family: 'Ubuntu', sans-serif;
     }
     
@@ -100,8 +101,8 @@ body{
     }
     
     &-phone{
-       padding-left: 17rem;
-        padding-top: 10rem;
+       margin-left: 10rem;
+       margin-top: 7rem;
     }
     
     /* button */
@@ -338,8 +339,9 @@ body{
     .weather-wrapper{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+        margin-bottom: 17rem;
     }
     
     
@@ -347,27 +349,106 @@ body{
 
 @media(min-width: 992px) and (max-width: 1199px) {
     .weather{
-        width: 95%;
+        width: 85%;
+        
+        &-app{
+            
+        }
     }
     
     
 }
 
-@media(min-width: 1300px) and (max-width:1980px){
+@media(min-width: 1300px) and (max-width:1900px){
+
     .app{
-        padding-bottom: 45rem;
+        padding-bottom: 7rem;
     }
     
     .weather{
-        width: 100%;
+        width: 85%;
+        
+        &-app{
+            width: 70%;
+            font-size: 5.5rem;
+        }
     
+        &-wrapper{
+            width: 85%;
+        }
     
         &-info{
-            padding-top: 7rem;
+            padding-top: 12rem;
+//            width: 62rem;
+            width: 53%;
         }
 
         &-fun{
             font-size: 2.4rem;
+        }
+        
+        &-phone{
+            
+           
+        }
+        
+        &-text{
+            width: 65%;
+            font-size: 1.8rem;
+        }
+        
+        &-menu{
+           
+            ul{
+                
+                
+                .menu-link{
+                    font-size: 2.5rem;
+                }
+                
+                .menu-icon{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1901px){
+    .app{
+        padding-bottom: 15rem;
+    }
+    
+    .weather{
+        width: 85%;
+        
+        &-app{
+            width: 96%;
+            font-size: 8rem;
+        }
+    
+        &-wrapper{
+            width: 85%;
+        }
+    
+        &-info{
+            padding-top: 12rem;
+//            width: 62rem;
+            width: 53%;
+        }
+
+        &-fun{
+            font-size: 2.4rem;
+        }
+        
+        &-phone{
+            margin-left: 17rem;
+           
+        }
+        
+        &-text{
+            width: 71%;
+            font-size: 2.5rem;
         }
         
         &-menu{

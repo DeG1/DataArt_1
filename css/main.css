@@ -398,7 +398,7 @@ body {
   height: 100vh;
   background-color: #648cff;
   position: relative;
-  padding-bottom: 15rem; }
+  padding-bottom: 2rem; }
 
 .weather {
   width: 85%;
@@ -440,7 +440,7 @@ body {
     width: 50%;
     padding-top: 8rem; }
   .weather-app {
-    font-size: 5.5rem;
+    font-size: 6rem;
     font-family: 'Ubuntu', sans-serif; }
   .weather-text {
     width: 80%;
@@ -448,8 +448,8 @@ body {
     font-size: 1.8rem;
     opacity: 0.7; }
   .weather-phone {
-    padding-left: 17rem;
-    padding-top: 10rem; }
+    margin-left: 10rem;
+    margin-top: 7rem; }
   .weather-btn {
     margin-top: 2rem;
     padding: 1.5rem;
@@ -604,22 +604,57 @@ body {
   .weather-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; } }
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17rem; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .weather {
-    width: 95%; } }
+    width: 85%; } }
 
-@media (min-width: 1300px) and (max-width: 1980px) {
+@media (min-width: 1300px) and (max-width: 1900px) {
   .app {
-    padding-bottom: 45rem; }
+    padding-bottom: 7rem; }
   .weather {
-    width: 100%; }
+    width: 85%; }
+    .weather-app {
+      width: 70%;
+      font-size: 5.5rem; }
+    .weather-wrapper {
+      width: 85%; }
     .weather-info {
-      padding-top: 7rem; }
+      padding-top: 12rem;
+      width: 53%; }
     .weather-fun {
       font-size: 2.4rem; }
+    .weather-text {
+      width: 65%;
+      font-size: 1.8rem; }
+    .weather-menu ul .menu-link {
+      font-size: 2.5rem; }
+    .weather-menu ul .menu-icon {
+      font-size: 2.5rem; } }
+
+@media (min-width: 1901px) {
+  .app {
+    padding-bottom: 15rem; }
+  .weather {
+    width: 85%; }
+    .weather-app {
+      width: 96%;
+      font-size: 8rem; }
+    .weather-wrapper {
+      width: 85%; }
+    .weather-info {
+      padding-top: 12rem;
+      width: 53%; }
+    .weather-fun {
+      font-size: 2.4rem; }
+    .weather-phone {
+      margin-left: 17rem; }
+    .weather-text {
+      width: 71%;
+      font-size: 2.5rem; }
     .weather-menu ul .menu-link {
       font-size: 2.5rem; }
     .weather-menu ul .menu-icon {
