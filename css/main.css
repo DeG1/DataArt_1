@@ -395,7 +395,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
   background-color: #648cff;
   position: relative;
   padding-bottom: 2rem; }
@@ -649,7 +648,7 @@ body {
       padding-top: 12rem;
       width: 53%; }
     .weather-fun {
-      font-size: 2.4rem; }
+      font-size: 2.2rem; }
     .weather-phone {
       margin-left: 17rem; }
     .weather-text {
